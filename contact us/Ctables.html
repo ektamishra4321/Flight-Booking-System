@@ -1,0 +1,109 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid blue;
+  font-size: 18px;
+  background-color:lightblue;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid blue;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color:yellow;
+}
+</style>
+</head>
+<body bgcolor=#191970>
+
+<h2> <font color="yellow"> City name and airport helpline numbers</font></h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">City</th>
+    <th style="width:40%;">Airport Helpline</th>
+  </tr>
+  <tr>
+    <td>Mumbai </td>
+    <td>77665588</td>
+  </tr>
+  <tr>
+    <td>Delhi</td>
+    <td>66544327</td>
+  </tr>
+  <tr>
+    <td>Bangalore</td>
+    <td>88704321</td>
+  </tr>
+  <tr>
+    <td>Chennai</td>
+    <td>44589730</td>
+  </tr>
+  <tr>
+    <td>Kolkata</td>
+    <td>87632047</td>
+  </tr>
+  <tr>
+    <td>Ahmedabad</td>
+    <td>11983072</td>
+  </tr>
+  <tr>
+    <td>Jaipur</td>
+    <td>76588990</td>
+  </tr>
+  <tr>
+    <td>Hyderabad</td>
+    <td>22389760</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>

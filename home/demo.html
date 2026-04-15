@@ -1,0 +1,603 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+}
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  font-size: 150px;
+  color: black;
+  top: 90%;
+  left: 20%;
+  transform: translate(-20%,-10%);
+  animation: glow 1s ease-in-out infinite alternate
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow 
+{
+  from {
+    text-shadow: 0 0 10px grey, 0 0 20px grey, 0 0 30px grey, 0 0 40px grey, 0 0 50px grey, 0 0 60px grey, 0 0 70px grey;
+  }
+  
+  to {
+    text-shadow: 0 0 20px blue, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+  }
+}
+video {
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 70%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+.video-container {
+    height: 200px;
+}
+
+.video-parallax {
+    -webkit-transition-position: fixed;
+    position: fixed;
+}
+
+
+.parallax {
+  /* The image used */
+  background-video: url('video.mp4');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#00008B;
+  height:100px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #00FFFF;
+  color: white;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("homeimg.jpg");
+
+  /* Set a specific height */
+  min-height: 650px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  /* The image used */
+  background-image: url("homeimg.jpg");
+
+  /* Set a specific height */
+  min-height: 600px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  margin-top:-30px
+}
+
+.parallax3 {
+  /* The image used */
+  background-image: url("city3.jpg");
+
+  /* Set a specific height */
+  min-height: 600px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.form{
+  position: absolute;
+  font-size: 150px;
+  color: black;
+  top: 155%;
+  transform: translate(-5%);
+  margin-left:650px;
+
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#flight">Flight time table</a>
+  <a href="#payment">Payment and offers</a>
+  <a href="#booking">Seat booking</a>
+  <a href="#bags">Baggage</a>
+  <a href="#airport">Airport and hotel locations</a>
+  <a href="#contact">Contact us</a>
+  <a href="#login">Sign up/Login</a>
+  
+</div>
+
+<div class="video-container">
+  <video autoplay poster="" class="video-parallax" loop muted>
+    
+    <source src="video.mp4" type="video/mp4">
+  </video>
+<div class="centered","glow">Aerofly Airlines</div>
+</div>
+
+<div class="parallax"></div>
+
+<div class="parallax1"></div>
+<style>
+.container {
+  padding: 16px;
+}
+</style>
+
+<div class="form">
+<div style="height:600px; width:600px;background-color:#00008B;font-size:36px"><CENTER> 
+
+<form>  
+  <div class="container">  
+  <center>  <h1> <font size=20 color=#00FFFF> Fly with us </font> </h1> </center>  
+  <hr>  
+
+<font color=#00FFFF size=5>
+
+
+<label> FROM </label>   
+<input type="text" name="FROM" placeholder= "Current city" size="15" required />   
+<label> TO </label>   
+<input type="text" name="TO" placeholder="Destination city" size="15" required />   
+  <div>  
+
+
+<br>
+
+
+<div>
+<label>   
+Adult Seats:  
+</label>   
+<select>  
+<option value="1">1</option>  
+<option value="2">2</option>  
+<option value="3">3</option>  
+<option value="4">4</option>  
+<option value="5">5</option>  
+</select>  
+
+
+<label>   
+Infant seats:  
+</label>   
+<select>  
+<option value="1">0</option>  
+<option value="2">1</option>  
+<option value="3">2</option>  
+</select>  
+
+
+
+<br>
+<BR>
+
+<div>  
+<label>  From date </label>  
+<input type="date" id="myDate" value="2022-10-09">
+ <label> Return date </label>  
+<input type="date" id="myDate" value="2022-10-09">
+</div>  
+
+<BR>
+
+<div>
+<label>   
+Phone :  
+</label>  
+<input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>   
+<input type="text" name="phone" placeholder="phone no." size="10"/ required>  
+
+<BR> 
+<BR> 
+ <label for="email"><b>Email</b></label>  
+<input type="text" placeholder="Enter Email" name="email" required>  
+  </div>
+    
+
+<BR>
+
+<button type="submit"> Search Details </button>    
+</form>  
+</CENTER>
+</div>
+</body>  
+</html>  
+
+</div>
+<div> 
+<style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  color:red;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+ 
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px;
+  color:#00008B;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 400%;
+  max-height: 1500%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<!-- The App Section -->
+<div class="container" style="background-color:#F0FFFF">
+
+<div style="text-align:center">
+  <h2><font color="red" size="25"> Experience the Luxury</font></h2>
+ </div> 
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Feedback</b></h1>
+      <h1 class="large-font" style="color:red;"><b>Have feedback for us?</b></h1>
+       <p> <font color="#00008B"> We value your opinion. Give us your feedback and let us know how you liked our services and travel facilities.</font></p>
+<button class="button" style="background-color:red">Learn More</button></div>
+    <div class="column-33">
+        <img src="feedback.jpg" width="400" height="1500">
+    </div>
+  </div>
+</div>
+
+<!-- Clarity Section -->
+<div class="container" style="background-color:#ADD8E6">
+  <div class="row">
+    <div class="column-33">
+      <img src="travel.jpg" alt="App" width="350" height="1500">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Travel Requirements</b></h1>
+      <h1 class="large-font" style="color:red;"><b> Need to know what all to carry?</b></h1>
+       <p> <font color="#00008B"> We provide you elaborate information on the travel requirements.</font></p>
+<button class="button" style="background-color:red">Learn More</button>
+    </div>
+  </div>
+</div>
+
+<!-- The App Section -->
+<div class="container" style="background-color:#F0FFFF">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Latest news</b></h1>
+      <h1 class="large-font" style="color:red;"><b>What is new ?</b></h1>
+       <p> <font color="#00008B"> Click to know more about the latest updates and developments of our airlines.</font></p>
+<button class="button" style="background-color:red">Learn More</button>
+    </div>
+    <div class="column-33">
+        <img src="news.jpg" width="400" height="1500" >
+    </div>
+  </div>
+</div>
+
+
+<!-- Clarity Section -->
+<div class="container" style="background-color:#ADD8E6">
+  <div class="row">
+    <div class="column-33">
+      <img src="services.jpg" alt="App" width="350" height="1500">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b> Our services</b></h1>
+      <h1 class="large-font" style="color:red;"><b>WHY US?</b></h1>
+       <p> <font color="#00008B"> Know about the various services our airlines offer.</font></p>
+<button class="button" style="background-color:red">Learn More</button>
+    </div>
+  </div>
+</div>
+
+<!-- The App Section -->
+<div class="container" style="background-color:#F0FFFF">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>FAQ's</b></h1>
+      <h1 class="large-font" style="color:red;"><b>Have more questions?</b></h1>
+       <p> <font color="#00008B">We have answers to all the common questions asked.</font></p>
+<button class="button" style="background-color:red">Learn More</button>
+    </div>
+    <div class="column-33">
+        <img src="faq.png" width="400" height="1500" >
+    </div>
+  </div>
+</div>
+</div>
+
+<div style="background-color:#F0FFFF">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style media="screen">
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+  box-sizing:border-box;
+}
+body{
+    background: black;
+    font-family: sans-serif;
+}
+footer{
+    position: absolute;
+    top:3688px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:black;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+     background-color:black;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+    background-color:black;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+     background-color:black;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    background-color:black;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+
+    border-radius: 50%;
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+
+
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px;
+padding-bottom: 40px;
+    text-align: center;
+    background-color:black;
+}
+.footer-bottom p{
+float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    background-color:black;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 16px;
+  text-decoration: none;
+   background-color:black;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+   background-color:black;
+}
+.footer-menu{
+  float: right;
+ background-color:black;
+
+}
+.footer-menu ul{
+  display: flex;
+   background-color:black;
+}
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+  background-color:black;
+}
+.footer-menu ul li a{
+  color: #cfd2d6;
+  text-decoration: none;
+  background-color:black;
+}
+.footer-menu ul li a:hover{
+  color: #27bcda;
+}
+      
+@media (max-width:500px) {
+.footer-menu ul{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color:black;
+}
+}
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="footer-content">
+            <h3><a href="">About US</a></li>
+            <p>Know more about us and connect with us through our social media accounts.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            
+                    <div class="footer-menu">
+                      <ul class="f-menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms and conditions</a></li>
+                        </ul>
+                    </div>
+        </div>
+
+    </footer>
+</body>
+</html>
+
+
+</body>
+</html>
