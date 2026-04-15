@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        background-color:aqua;
+    }
+    p.one
+    {
+        border-width: 2px;
+        border-style: solid;
+        margin-right: 600px;
+    }
+    img
+    {
+        margin-top: 100px;
+    }
+    h1
+    {
+        margin-left: 500px;
+    }
+    .butt
+{
+background-color:lightgreen;
+color:black;
+font-size:20px;
+padding:8px;
+border-radius:15px;
+margin-left:30px;
+margin-top:15px;
+}
+
+
+.butt:hover
+{
+background-color:green;
+
+
+}
+</style>
+<body>
+    <img src="faq.png" align="right">
+    <h1>Frequently Asked Questions (FAQ's)</h1><br>
+    <ul style="list-style-type:square">
+    <li><h2>What is online booking ?</h2></li>
+    <p class="one">
+        Online booking through our website is a convenient way of booking your travel over the internet.
+    </p>
+    <li><h2>What are the time restrictions of buying a ticket online?</h2>
+    <p class="one">
+        Online booking is available for all flights up to 2 hours before scheduled departure time.<br> Online booking is available for any flight, with a scheduled departure up to 361 days in the future.
+    </p>
+    <li><h2>Can I make an online booking for a child traveling alone?</h2>
+    <p class="one">
+        No, you cannot make a booking for a child travelling alone.
+    </p>
+    <li><h2>How can I book a one way or return travel?</h2>
+    <p class="one">
+        Select the "One way” radio button on the "Search Flights” tab for one-way travel.<br>The "Return” radio button is used for booking return point to point travel.
+    </p>
+    <li><h2>Can I purchase an open-dated ticket when I book online?</h2>
+    <p class="one">
+        No. The selected sectors must be booked on a confirmed basis and paid for at the same time.
+    </p>
+    <li><h2>What flights are available for online bookings on www.aerofly.in ?</h2>
+    <p class="one">
+        Online booking is available for India operated flights, on all destinations on the Indianetwork.
+    </p>
+    </ul>
+    <a href="home_log.php"><button class="butt">Home Page</button></a>
+</body>
+</html>

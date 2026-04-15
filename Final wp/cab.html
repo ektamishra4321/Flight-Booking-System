@@ -1,0 +1,119 @@
+<html>
+
+<head>
+  <title>
+    Cab Services
+  </title>
+</head>
+<style>
+  h2 {
+    font-family: "Bauhaus 93";
+    color: #512a11;
+  }
+
+  body {
+    margin-left: 17px;
+    font-family: "Arial Black";
+    color: #512a11;
+  }
+
+  div.one {
+    background-color: bisque;
+    font-family: "Bauhaus 93";
+    font-size: 30px;
+  }
+
+  input[type=text],
+  select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=password],
+  select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  div {
+
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+</style>
+
+<body bgcolor="#f6f0d1">
+  <center>
+    <div class="one">
+      <center><u>AeroFly Services</u></center>
+    </div><br>
+
+    <form action="cab.php" method="get">
+      <div>
+        <h2><u>Cab Services</u></h2>
+        <table>
+
+          <tr>
+            <td>Destination:</td>
+            <th><input type="text" id="dest" name="dest" placeholder="destination" size="70" required></th>
+          </tr>
+
+          <tr>
+            <td>Type:</td><br>
+            <th><select name="type" size="4" required>
+                <option value="mini">Mini</option>
+                <option value="sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="lux">Luxury</option>
+              </select></th><br>
+          </tr>
+
+          <tr>
+            <td>Payment via:</td>
+            <th>
+              <select name="pay" size="4" required>
+                <option value="cash">Cash</option>
+                <option value="upi">UPI</option>
+                <option value="cc">Credit/Debit Card</option>
+                <option value="wallets">Wallets</option>
+              </select>
+            </th>
+          </tr>
+
+          <tr>
+            <td></td>
+            <th><input type="submit" value="Submit"></th>
+          </tr>
+        </table>
+      </div>
+    </form>
+  </center>
+</body>
+
+</html>

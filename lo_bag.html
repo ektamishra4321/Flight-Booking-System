@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+p.one
+    {
+        font-size:16px ;
+        color:white;
+    }
+    p.two
+    {
+        font-size: 30px;
+        color:white;
+    }
+    p.three
+    {
+        font-size:20px;
+        color:white;
+    }
+    a
+    {
+        font-size:20px;
+        color:white;
+    }
+    body
+    {
+        background-color: rgb(46, 42, 42);
+    }
+    label
+    {
+        color: white;
+    }
+</style>
+
+
+<form name="frm">
+    <label for="loc1" style="font-size:28px;">Enter the location where you last saw your bag : </label><br>
+    <input type="text" id="loc1" required><br>
+    <label for="loc2" style="font-size:28px;">Enter the time you last saw your bag : </label><br>
+    <input type="time" id="loc2"><br>
+    <label for="loc3" style="font-size:28px;">Enter Date:  </label><br>
+    <input type="date" id="loc3"><br>
+    <label for="loc4" style="font-size:28px;">Enter your email:  </label><br>
+    <input type="text" id="loc4" name="email1"><br><br>
+    <input type="submit" onclick="ValidateEmail(document.frm.email1)" value="verify email"><br><br>
+    <input type="button" onclick="pr()" value="submit">
+
+</form>
+<body>
+<p class="one">Liaibility for Carriage which is not international is subject to the rules and limitations relating to liability as specified by Notifications issued from time to time under Section 8 of the Indian Carriage by air Act, 1972 and pursuant to Notification No S.O. 142(E), dated January 17, 2014, issued by the Ministry of Civil Aviation.</p>    
+<b><p class="three">Delayed Baggage</p></b>
+<p class="one">For baggage which is not received , please contact Aerofly personnel in the arrival hall and report the same.A Property Irregularity Report will be filed and a copy will be given with a reference number for follow up action.</p>
+<b><p class=three>Lost Baggage</p></b>
+<p class="one">If a delayed baggage could not be traced for 21 days from the date of Property Irregularity Report , the same may be treated as lost. The compensation claim will be processed as per laid down procedures. All claims to be substantiated with itemized list of contents, description, age together with proof of purchase / ownership of all such items.</p>
+<br>
+<button><a href="first_page.html" target="first_page.html"><font style="color:black">GO BACK</font></a></button>
+
+<script>
+
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(frm.email1.value))
+  {
+    alert("Email address verified")
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+    function pr()
+    {
+        var x=document.getElementById("loc1").value;
+        var y=document.getElementById("loc2").value;
+        var z=document.getElementById("loc3").value;
+        var a=document.getElementById("loc4").value;
+
+        
+        
+        if(x==""||y==""||z==""||a=="")
+        {
+            alert("PLease fill in all the details");
+        }
+        else
+        {
+            alert("Your details have been submitted, you will be informed shortly about your baggage through EMAIL.");
+        }
+
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(frm.email1.value))
+  {
+    alert("Email address verified")
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+    }
+
+
+</script>
+</body>
+</html>
